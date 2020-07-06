@@ -1,32 +1,24 @@
 import Phaser from "phaser";
-import logoImg from "./assets/logo.png";
 
 const config = {
-  type: Phaser.AUTO,
-  parent: "phaser-example",
-  width: 800,
-  height: 600,
+  parent: "app",
+  width: window.innerWidth,
+  height: window.innerHeight,
   scene: {
-    preload: preload,
     create: create
   }
 };
 
-const game = new Phaser.Game(config);
-
-function preload() {
-  this.load.image("logo", logoImg);
-}
+var game = new Phaser.Game(config);
+var text;
 
 function create() {
-  const logo = this.add.image(400, 150, "logo");
-
-  this.tweens.add({
-    targets: logo,
-    y: 450,
-    duration: 2000,
-    ease: "Power2",
-    yoyo: true,
-    loop: -1
+  text = this.add.text(window.innerWidth/2, window.innerHeight/2, "Info débranché", {
+    font: "65px Arial",
+    fill: "#ffffff",
+    align: "center"
   });
+
+  text.setOrigin(.5, .5)
 }
+
