@@ -1,18 +1,19 @@
 import Phaser from "phaser";
 
 const config = {
-  parent: "app",
+  parent: "phaserGame",
   width: window.innerWidth,
   height: window.innerHeight,
   scene: {
     create: create
-  }
+  },
 };
 
-// var game = new Phaser.Game(config);
-var text;
+let game = new Phaser.Game(config);
+let text;
 
 function create() {
+  this.scene.visible = false
   text = this.add.text(window.innerWidth/2, window.innerHeight/2, "Info débranché", {
     font: "65px Arial",
     fill: "#ffffff",
