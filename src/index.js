@@ -9,7 +9,7 @@ const config = {
   }
 };
 
-var game = new Phaser.Game(config);
+// var game = new Phaser.Game(config);
 var text;
 
 function create() {
