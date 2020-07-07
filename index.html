@@ -5,46 +5,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- Full jQuery lib -->
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <title>reconnected homepage</title>
+  <title>Reconnected Game - index</title>
 </head>
 <body>
-  <div id="phaserGame" style="display: none"></div>
-  <div id="content"></div>
-  <div id="error"></div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div id="phaserGame" class="fullWindow" style="display: none"></div>
+  <div id="content">
+    <div  class="d-flex flex-column justify-content-center">
+      <img class="mt-5 w-75 mx-auto" src="../src/assets/Reconnect.png" alt="game logo">
+
+      <form class="mx-auto mt-5 col-sm-7 col-md-5 col-lg-3">
+        <div class="form-group d-flex flex-column justify-content-center">
+          <label for="pseudo">Pseudo</label>
+          <input type="text" class="form-control" id="pseudo">
+          <small id="pseudoHelp" class="form-text text-muted">Pour entrer dans le hall of fame !</small>
+        </div>
+      </form>
+
+      <button type="button" class="btn btn-primary mt-3 w-auto mx-auto"
+              onclick="document.getElementById('phaserGame').style = '';
+              document.getElementById('content').style = 'display: none';"> Commencer
+      </button>
+    </div>
+
+    <footer class="d-flex justify-content-center mb-3">
+      <a class="btn btn-link" href="/pages/apropos.html">A propos</a>
+    </footer>
+  </div>
 </body>
 </html>
-
-<script>
-  $(document).ready( function() {
-    console.log('load homepage')
-    console.log($('#content'))
-    $('#content').load("./pages/homepage.html", function( response, status, xhr ) {
-      if ( status == "error" ) {
-        let msg = "Sorry but there was an error: ";
-        $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-      }
-    });
-  });
-
-  function loadPage(page) {
-    if(page === 'apropos') {
-      $("#content").load("./pages/apropos.html");
-    } else if(page === 'homepage') {
-      $("#content").load("./pages/homepage.html");
-    } else if(page === 'cardGame') {
-      $("#content").load("./pages/cardGame.html")
-      $("#phaserGame").show()
-    }
-  }
-</script>
 
 <style>
   body {
@@ -66,4 +54,10 @@
   .btn-primary:hover {
     background-color: #7FD3F5;
   }
+
+  .fullWindow {
+    width: 100%;
+    height: 100%;
+  }
 </style>
+

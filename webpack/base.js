@@ -45,16 +45,12 @@ module.exports = {
       template: "./index.html",
     }),
     new HtmlWebpackPlugin({
-      // filename: 'pages/apropos.html',
+      filename: 'pages/apropos.html',
       template: 'pages/apropos.html'
     }),
     new HtmlWebpackPlugin({
-      // filename: 'pages/cardGame.html',
+      filename: 'pages/cardGame.html',
       template: 'pages/cardGame.html'
-    }),
-    new HtmlWebpackPlugin({
-      // filename: 'pages/homepage.html',
-      template: 'pages/homepage.html'
     })
   ]
 };
