@@ -1,4 +1,6 @@
 import Phaser from "phaser";
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const config = {
   parent: "phaserGame",
