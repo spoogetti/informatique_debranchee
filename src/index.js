@@ -1,8 +1,5 @@
 import Phaser from "phaser";
 
-import phaserLogo from "./assets/logo.png"
-import reconectLogo from "./assets/Reconnect.png"
-
 const config = {
   parent: "phaserGame",
   width: window.innerWidth,

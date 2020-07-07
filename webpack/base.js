@@ -22,7 +22,11 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg|xml)$/i,
         use: "file-loader"
-      }
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ]
   },
   plugins: [
@@ -37,24 +41,16 @@ module.exports = {
       template: "./index.html",
     }),
     new HtmlWebpackPlugin({
-      filename: 'pages/apropos.html',
+      // filename: 'pages/apropos.html',
       template: 'pages/apropos.html'
     }),
     new HtmlWebpackPlugin({
-      filename: 'pages/cardGame.html',
+      // filename: 'pages/cardGame.html',
       template: 'pages/cardGame.html'
     }),
     new HtmlWebpackPlugin({
-      filename: 'pages/homepage.html',
+      // filename: 'pages/homepage.html',
       template: 'pages/homepage.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'src/assets/logo.png',
-      template: 'src/assets/logo.png'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'src/assets/Reconnect.png',
-      template: 'src/assets/Reconnect.png'
     })
   ]
 };
