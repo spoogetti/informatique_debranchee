@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import map from "./map";
+import Pipe from "../lib/Pipe";
 
 const config = {
   parent: "app",
