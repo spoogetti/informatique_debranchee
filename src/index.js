@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import map from "./map";
 
 const config = {
   parent: "app",
@@ -20,5 +21,7 @@ function create() {
   });
 
   text.setOrigin(.5, .5)
+  map.init(this);
 }
+
 
