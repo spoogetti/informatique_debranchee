@@ -47,6 +47,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'pages/homepage.html',
       template: 'pages/homepage.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'src/assets/logo.png',
+      template: 'src/assets/logo.png'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'src/assets/Reconnect.png',
+      template: 'src/assets/Reconnect.png'
     })
   ]
 };
