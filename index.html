@@ -1,13 +1,22 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Reconnected Game - index</title>
+
+<<<<<<< Updated upstream
   <title>Reconnected</title>
+=======
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+>>>>>>> Stashed changes
 </head>
+
 <body>
+<<<<<<< Updated upstream
   <div id="app">
   </div>
   
@@ -20,43 +29,41 @@
           <label for="pseudo">Pseudo</label>
           <input type="text" class="form-control" id="pseudo">
           <small id="pseudoHelp" class="form-text text-muted">Pour entrer dans le hall of fame !</small>
+=======
+    <div id="phaserGame" class="fullWindow" style="display: none"></div>
+    <div id="content" class="page-home">
+        <div class="custom-container">
+            <a class="btn btn-shadow btn-infos" href="/pages/apropos.html">?</a>
+
+            <div class="page-home-content">
+                <div class="logo">
+                    <img class="img-fluid float" src="./src/assets/Reconnect.png" alt="game logo">
+                </div>
+
+                <div class="form-name">
+                    <form>
+                        <div class="form-group d-flex flex-column justify-content-center">
+                            <label for="pseudo">Ton prénom</label>
+                            <input type="text" class="form-control" id="pseudo">
+                        </div>
+                    </form>
+
+                    <button type="button" class="btn btn-shadow btn-submit" onclick="document.getElementById('phaserGame').style = '';
+                  document.getElementById('content').style = 'display: none';">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" fill="none">
+                    <path d="M18.5 8.40193C20.5 9.55663 20.5 12.4434 18.5 13.5981L5 21.3923C3 22.547 0.500001 21.1036 0.500001 18.7942L0.500002 3.20577C0.500002 0.896368 3 -0.547006 5 0.607695L18.5 8.40193Z" fill="white"/>
+                    </svg>
+          </button>
+                </div>
+            </div>
+>>>>>>> Stashed changes
         </div>
-      </form>
 
+<<<<<<< Updated upstream
       <button type="button" class="btn btn-primary mt-3 w-auto mx-auto" id="startGameBtn">Commencer</button>
+=======
+>>>>>>> Stashed changes
     </div>
-
-    <footer class="d-flex justify-content-center mb-3">
-      <a class="btn btn-link" href="/pages/apropos.html">A propos</a>
-    </footer>
-  </div>
 </body>
+
 </html>
-
-<style>
-  body {
-    background-color: whitesmoke;
-  }
-
-  footer {
-    width: 640px;
-    margin: 0% -320px;
-    position: fixed;
-    left: 50%;
-    bottom: 0%;
-  }
-
-  .btn-primary {
-    background-color: #580FA7;
-  }
-
-  .btn-primary:hover {
-    background-color: #7FD3F5;
-  }
-
-  .fullWindow {
-    width: 100%;
-    height: 100%;
-  }
-</style>
-
