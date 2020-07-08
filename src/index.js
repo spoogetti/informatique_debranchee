@@ -3,13 +3,17 @@ import map from "./map";
 import Pipe from "../lib/Pipe";
 
 document.querySelector("#app").style.width = window.innerWidth + "px"
-document.querySelector("#app").style.height = window.innerHeight + "px"
+document.querySelector("#app").style.height = window.innerHeight + 1500 + "px"
 document.querySelector("#app").style.overflow = "scroll"
 
+
 const config = {
-  parent: "app",
-  width: window.innerWidth,
-  height: window.innerHeight + 1500,
+  scale: {
+    parent: "app",
+    width: window.innerWidth,
+    height: window.innerHeight + 1500,
+    mode: Phaser.Scale.ENVELOP,
+  },
   scene: {
     create: create
   }
@@ -29,7 +33,6 @@ function create() {
 
   text.setOrigin(.5, .5)
   map.init(this);
-
 }
 
 

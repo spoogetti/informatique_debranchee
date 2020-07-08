@@ -12,9 +12,10 @@ const map = {
         let map = new ReconnectMap(this.scene, 0, 0, [])
 
         map.createTerrain()
-        map.center()
-
         map.createLevels(levels)
+
+        map.center()
+        window.scrollTo(0, document.body.scrollHeight);
     },
 
     drawBackground() {
