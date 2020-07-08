@@ -2,6 +2,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    height: 100vh;
+}
+
 .page-home {
     background: linear-gradient(170deg, #7FD3F5 0%, #3E2AA1 35.94%, #3E2AA1 46.35%, #6723B0 100%);
     width: 100%;
