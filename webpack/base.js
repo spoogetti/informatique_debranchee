@@ -22,6 +22,14 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg|xml)$/i,
         use: "file-loader"
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
+        test: /\.css$/i,
+        loader: ['style-loader', 'css-loader'],
       }
     ]
   },
@@ -34,7 +42,15 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      template: "./index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'pages/apropos.html',
+      template: 'pages/apropos.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'pages/cardGame.html',
+      template: 'pages/cardGame.html'
     })
   ]
 };
