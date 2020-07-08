@@ -1,16 +1,16 @@
 import Phaser from "phaser";
-import map from "./map";
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ReconnectGame from "../lib/ReconnectGame";
 
 document.querySelector("#startGameBtn").addEventListener("click", () => {
-  let psuedo = document.querySelector("#pseudo").value;
+  let pseudo = document.querySelector("#pseudo").value;
   document.querySelector("#loginView").remove();
-  launchMap()
+  launchMap(pseudo)
 })
 
-const launchMap = () => {
+const launchMap = (pseudo) => {
 
   let margins = 200
   // setup container
@@ -30,10 +30,11 @@ const launchMap = () => {
     }
   };
   
-  var game = new Phaser.Game(config);
+  var game = new ReconnectGame(config)
   
   function create() {
-    map.init(this);
+    game.createMap();
+    game.configurePlayer(pseudo)
   }
 }
 
