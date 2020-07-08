@@ -7,10 +7,10 @@ import ReconnectGame from "../lib/ReconnectGame";
 document.querySelector("#startGameBtn").addEventListener("click", () => {
   let pseudo = document.querySelector("#pseudo").value;
   document.querySelector("#loginView").remove();
-  launchMap(pseudo)
+  launchGame(pseudo)
 })
 
-const launchMap = (pseudo) => {
+const launchGame = (pseudo) => {
 
   let margins = 200
   // setup container
