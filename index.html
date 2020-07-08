@@ -5,11 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Reconnected Game - index</title>
+  <title>Reconnected</title>
 </head>
 <body>
-  <div id="phaserGame" class="fullWindow" style="display: none"></div>
-  <div id="content">
+  <div id="app">
+  </div>
+  
+  <div id="loginView">
     <div  class="d-flex flex-column justify-content-center">
       <img class="mt-5 w-75 mx-auto" src="./src/assets/Reconnect.png" alt="game logo">
 
@@ -21,10 +23,7 @@
         </div>
       </form>
 
-      <button type="button" class="btn btn-primary mt-3 w-auto mx-auto"
-              onclick="document.getElementById('phaserGame').style = '';
-              document.getElementById('content').style = 'display: none';"> Commencer
-      </button>
+      <button type="button" class="btn btn-primary mt-3 w-auto mx-auto" id="startGameBtn">Commencer</button>
     </div>
 
     <footer class="d-flex justify-content-center mb-3">

@@ -9,7 +9,7 @@ export let cardGame = function() {
 
     const config = {
         type: Phaser.AUTO,
-        parent: 'phaserGame',
+        parent: 'app',
         width: 1920,
         height: 1080,
         scale: {
