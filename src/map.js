@@ -1,6 +1,8 @@
 import Phaser from "phaser";
 
 import ReconnectMap from "../lib/ReconnectMap";
+import levels from "../lib/levels";
+
 
 const map = {
     init(scene) {
@@ -11,13 +13,14 @@ const map = {
 
         map.createTerrain()
         map.center()
+
+        map.createLevels(levels)
     },
 
     drawBackground() {
         let { width, height } = this.scene.sys.game.canvas;
 
         var texture = this.scene.textures.createCanvas('gradient', width, height);
-        console.log(texture)
         var context = texture.getContext();
         var grd = context.createLinearGradient(0, 0, 0, height);
       
