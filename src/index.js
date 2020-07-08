@@ -2,6 +2,8 @@ import Phaser from "phaser";
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/styles/main.css';
+
 import ReconnectGame from "../lib/ReconnectGame";
 
 document.querySelector("#startGameBtn").addEventListener("click", () => {
@@ -37,5 +39,3 @@ const launchGame = (pseudo) => {
     game.configurePlayer(pseudo)
   }
 }
-
-
