@@ -38,6 +38,7 @@
   "dependencies": {
     "phaser": "^3.20.1",
     "phaser3-rex-plugins": "^1.1.19",
+    "html-loader": "^1.1.0",
     "bootstrap": "^4.5.0",
     "jquery": "^1.12.4",
     "popper.js": "^1.16.1"
