@@ -3,7 +3,7 @@ import map from "./map";
 import Pipe from "../lib/Pipe";
 
 document.querySelector("#app").style.width = window.innerWidth + "px"
-document.querySelector("#app").style.height = window.innerHeight + 1500 + "px"
+document.querySelector("#app").style.height = window.innerHeight + 500 + "px"
 document.querySelector("#app").style.overflow = "scroll"
 
 
@@ -11,7 +11,7 @@ const config = {
   scale: {
     parent: "app",
     width: window.innerWidth,
-    height: window.innerHeight + 1500,
+    height: window.innerHeight + 500,
     mode: Phaser.Scale.ENVELOP,
   },
   scene: {

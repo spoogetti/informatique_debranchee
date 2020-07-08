@@ -5,13 +5,18 @@ import levels from "../lib/levels";
 
 
 const map = {
+
+    destroyedPipesRow: [9, 13, 14, 21, 22, 24, 28],
+
+    destroyedPipesCol: [3, 4, 5, 7, 11, 14, 16, 19, 21, 23, 31, 35],
+
     init(scene) {
         this.scene = scene;
         this.drawBackground()
 
         let map = new ReconnectMap(this.scene, 0, 0, [])
 
-        map.createTerrain()
+        map.createTerrain(this.destroyedPipesRow, this.destroyedPipesCol)
         map.createLevels(levels)
 
         map.center()
