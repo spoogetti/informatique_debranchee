@@ -47,10 +47,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'pages/apropos.html',
       template: 'pages/apropos.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'pages/cardGame.html',
-      template: 'pages/cardGame.html'
     })
   ]
 };

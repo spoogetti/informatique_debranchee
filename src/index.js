@@ -2,8 +2,11 @@ import Phaser from "phaser";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {cardGame} from './games/cardGame.js'
+import {crepeGame} from './games/crepesGame.js'
 
 cardGame();
+// crepeGame();
+
 
 // const config = {
 //   parent: "phaserGame",

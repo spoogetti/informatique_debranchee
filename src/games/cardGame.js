@@ -1,6 +1,5 @@
 import Phaser from "phaser";
 
-// import cards from '../assets/cards.png';
 import fCards from '../assets/playingCards.png';
 
 export let cardGame = function() {
@@ -23,28 +22,26 @@ export let cardGame = function() {
         }
     };
 
-    var game = new Phaser.Game(config);
-
-    function preload() {
-        // this.load.image("logo", logoImg);
-        // card sprite sheet
-        // this.load.image('cards', cards);
-        // this.load.spritesheet('cards', cards, { frameWidth: 167, frameHeight: 243 });
-        this.load.spritesheet('fancyCards', fCards, cardSpriteDims);
-    }
+    let game = new Phaser.Game(config);
 
     let cards = []
+    let hearts = []
+
     let shuffledValues = []
     let values = []
-    let cardOriginalPos = {}
     let selectedCards = []
-    let hearts = []
+
+    let cardOriginalPos = {}
     let cardAmount = 6
     let depth = 0
     let cardToFlip
 
     let validateButton
     let winLoseIndicator
+
+    function preload() {
+        this.load.spritesheet('fancyCards', fCards, cardSpriteDims);
+    }
 
     function create() {
         // Sample logo with tween
@@ -59,10 +56,8 @@ export let cardGame = function() {
         // });
 
         hearts = [64, 23, 47, 38, 29, 20, 11, 2, 82, 73, 55, 46, 37]
-        values = [0, 1, 2 , 3, 4, 5, 6, 7, 8, 9]
-        for (let i = 99; i <=0; i--) {
+        for (let i = 0; i < 100; i++) {
             values.push(i)
-            console.log(i)
         }
 
         shuffledValues = values.splice(0, cardAmount).sort(() => Math.random() - 0.5).sort(() => Math.random() - 0.5).sort(() => Math.random() - 0.5)
@@ -83,7 +78,7 @@ export let cardGame = function() {
 
         validateButton = this.add.text(200, 200, 'Victory check button', { fill: '#0f0' })
             .setInteractive()
-            .on('pointerdown', () => validate() )
+            .on('pointerdown', () => validate())
             // .on('pointerover', () => this.enterButtonHoverState() )
             // .on('pointerout', () => this.enterButtonRestState() );
 

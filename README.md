@@ -2,11 +2,17 @@
 
 Project DAWIN by Laurie Dumery, Romain Roubaix & Pierre Moinet
 
+Appli pensée mobile first ->
 For development, use iphone 6/7/8 (375 x 667)
+
+For local dev:
+npm install (once)
+npm run start
 
 Link to gh-pages: https://spoogetti.github.io/informatique_debranchee/
 
 Deploy on gh-pages
+npm run build
 git subtree push --prefix dist origin gh-pages
 
 If the deploy says you can't:
