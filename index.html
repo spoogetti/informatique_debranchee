@@ -42,6 +42,29 @@
 
     <div id="app"></div>
 
+    <header id="header" class="d-none">
+        <div class="container">
+            <div class="main">
+                <p class="font-weight-bold">Niveau <span id="level">1</span></p>
+                <p class="font-weight-light"><span id="pipe">0</span> câble</p>
+            </div>
+            <div class="wifi">
+                <i class="fas fa-wifi"></i>
+            </div>
+        </div>
+    </header>
+
+    <div id="albert" class="speech speech-about sleep d-none">
+        <div class="speech-name" id="speech-name">
+            <img class="character-icon" src="/src/assets/robot.png" alt="🤖">
+            <span class="character-name">Albert</span>
+        </div>
+        <div class="speech-text" aria-labelledby="speech-name">
+            <p id="about-text"></p>
+        </div>
+        <a class="btn btn-shadow speech-btn d-none">Ok</a>
+    </div>
+
     <div id="loginView" class="page-home">
         <div class="custom-container">
             <a class="btn btn-shadow btn-infos" href="/pages/apropos.html">?</a>
@@ -67,7 +90,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </body>
 

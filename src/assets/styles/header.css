@@ -1,0 +1,31 @@
+#header {
+    width: 80%;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 13px 10px;
+    border-radius: 20px;
+    z-index: 99;
+    color: #636363;
+    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .container .main p {
+    margin: 0;
+}
+
+#header .container .main p:last-child {
+    font-size: 12px;
+}
+
+#header .container .wifi {
+    color: #EC3858;
+}
