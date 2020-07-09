@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/main.css';
 import './assets/styles/home.css';
 import './assets/styles/about.css';
+import './assets/styles/card-game.css';
 
 import ReconnectGame from "../lib/ReconnectGame";
 
