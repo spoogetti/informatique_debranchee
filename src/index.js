@@ -28,11 +28,16 @@ const launchGame = (pseudo) => {
       mode: Phaser.Scale.ENVELOP,
     },
     scene: {
+      preload: preload,
       create: create
     }
   };
   
   var game = new ReconnectGame(config)
+
+  function preload() {
+    this.load.svg("lock", '../lib/assets/lock.svg')
+  }
   
   function create() {
     game.createMap();
