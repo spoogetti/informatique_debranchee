@@ -24,3 +24,7 @@
 #header .container .main p:last-child {
     font-size: 12px;
 }
+
+#header .container .wifi {
+    color: #EC3858;
+}

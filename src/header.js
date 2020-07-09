@@ -1,8 +1,11 @@
+import styles from "./styles"
+
 const header = {
 
     HTMLContainer: () => document.querySelector("#header"),
     HTMLLevel: () => header.HTMLContainer().querySelector("#level"),
     HTMLPipe: () => header.HTMLContainer().querySelector("#pipe"),
+    HTMLWifi: () => header.HTMLContainer().querySelector(".wifi"),
 
     show() {
         this.HTMLContainer().classList.remove("d-none")
@@ -15,6 +18,10 @@ const header = {
     update(pipe, level) {
         this.HTMLLevel().innerHTML = level
         this.HTMLPipe().innerHTML = pipe
+    },
+
+    wifiMedium() {
+        this.HTMLWifi().style.color = styles.difficultiesColors.medium
     }
 }
 

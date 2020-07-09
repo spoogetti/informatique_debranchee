@@ -8,6 +8,7 @@ import '@fortawesome/fontawesome-free/js/all'
 import header from "./header"
 
 import ReconnectGame from "../lib/ReconnectGame";
+import styles from "../lib/globals/styles";
 
 document.querySelector("#startGameBtn").addEventListener("click", () => {
   let pseudo = document.querySelector("#pseudo").value;
@@ -51,6 +52,10 @@ const launchGame = (pseudo) => {
     // Bind events of game
     game.canvas.addEventListener("reconnect-game-placedPipe", () => {
       header.update(game.availablePipes, game.player.level)
+      
+      if(game.map.pipes.filter(p => !p.locked).length >= 1) {
+        header.wifiMedium();
+      }
     })
 
     game.canvas.addEventListener("reconnect-game-levelChoosed", () => {
