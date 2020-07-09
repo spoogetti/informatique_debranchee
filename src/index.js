@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/main.css';
 import './assets/styles/header.css';
 import '@fortawesome/fontawesome-free/js/all'
+import header from "./header"
 
 import ReconnectGame from "../lib/ReconnectGame";
 
@@ -44,5 +45,16 @@ const launchGame = (pseudo) => {
   function create() {
     game.createMap();
     game.configurePlayer(pseudo)
+    header.show()
+    header.update(game.availablePipes, game.player.level)
+
+    // Bind events of game
+    game.canvas.addEventListener("reconnect-game-placedPipe", () => {
+      header.update(game.availablePipes, game.player.level)
+    })
+
+    game.canvas.addEventListener("reconnect-game-levelChoosed", () => {
+      header.hide()
+    })
   }
 }
