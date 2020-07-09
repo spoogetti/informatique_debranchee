@@ -1,3 +1,4 @@
+
 const albert = {
 
     speed: 25,
@@ -31,6 +32,7 @@ const albert = {
     talk(content, callback=()=>{}) {
         var i = 0;
 
+        this.HTMLBtn().classList.add("d-none")
         typeWriter();
 
         function typeWriter() {
@@ -39,6 +41,7 @@ const albert = {
                 i++;
                 setTimeout(typeWriter, albert.speed);
             } else {
+                albert.HTMLBtn().classList.remove("d-none")
                 callback()
             }
         }

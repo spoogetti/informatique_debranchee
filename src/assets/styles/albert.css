@@ -18,6 +18,10 @@
     font-size: 14px;
 }
 
+#albert .speech-btn {
+    color: white;
+}
+
 #albert.sleep {
     animation: sleep .3s ease-out forwards;
 }
