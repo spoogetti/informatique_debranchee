@@ -6,14 +6,16 @@ import './assets/styles/main.css';
 import './assets/styles/header.css';
 import '@fortawesome/fontawesome-free/js/all'
 import header from "./header"
+import './assets/styles/home.css';
+import './assets/styles/about.css';
 
 import ReconnectGame from "../lib/ReconnectGame";
 import styles from "../lib/globals/styles";
 
 document.querySelector("#startGameBtn").addEventListener("click", () => {
-  let pseudo = document.querySelector("#pseudo").value;
-  document.querySelector("#loginView").remove();
-  launchGame(pseudo)
+    let pseudo = document.querySelector("#pseudo").value;
+    document.querySelector("#loginView").remove();
+    launchGame(pseudo)
 })
 
 const launchGame = (pseudo) => {
@@ -61,5 +63,4 @@ const launchGame = (pseudo) => {
     game.canvas.addEventListener("reconnect-game-levelChoosed", () => {
       header.hide()
     })
-  }
-}
+};
