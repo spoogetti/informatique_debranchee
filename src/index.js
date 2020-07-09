@@ -70,5 +70,10 @@ const launchGame = (pseudo) => {
     game.canvas.addEventListener("reconnect-game-levelChoosed", () => {
       header.hide()
     })
+
+    game.canvas.addEventListener("reconnect-game-backToMap", () => {
+      header.show()
+      header.update(game.availablePipes, game.player.level)
+    })
   }
 };
