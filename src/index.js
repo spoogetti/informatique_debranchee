@@ -72,10 +72,11 @@ const launchGame = (pseudo) => {
       }
     })
 
-    game.canvas.addEventListener("reconnect-game-levelChoosed", () => {
+    game.canvas.addEventListener("reconnect-game-levelChoosed", (e) => {
       header.hide()
       document.querySelector("#cardGame").classList.remove("d-none")
       document.querySelector("#app").classList.add("clip-cardGame")
+      document.querySelector("#reward").innerHTML = e.detail.level.reward
     })
 
     game.canvas.addEventListener("reconnect-game-backToMap", () => {
