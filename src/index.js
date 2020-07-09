@@ -77,6 +77,10 @@ const launchGame = (pseudo) => {
       document.querySelector("#cardGame").classList.remove("d-none")
       document.querySelector("#app").classList.add("clip-cardGame")
       document.querySelector("#reward").innerHTML = e.detail.level.reward
+
+      albert.levelMode()
+      albert.wake()
+      albert.talk("Coucou les petits")
     })
 
     game.canvas.addEventListener("reconnect-game-backToMap", () => {

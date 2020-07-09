@@ -26,7 +26,7 @@ const albert = {
         this.HTMLContainer().classList.replace("wake", "sleep")
         setTimeout(() => {
             this.HTMLContainer().classList.add("d-none")
-        }, 2000)
+        }, 400)
     },
 
     talk(content, callback=()=>{}) {
