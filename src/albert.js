@@ -56,6 +56,14 @@ const albert = {
         this.HTMLBtn().addEventListener("click", () => {
             this.sleep();
         })
+    },
+
+    levelMode() {
+        this.HTMLContainer().classList.add("level")
+    },
+
+    defaultMode() {
+        this.HTMLContainer().classList.remove("level")
     }
 }
 

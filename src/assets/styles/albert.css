@@ -9,6 +9,19 @@
     transform-origin: center;
 }
 
+#albert.level .speech-text {
+    border-color: #FCC470;
+    background-color: #FFDD89;
+}
+
+#albert.level .speech-name {
+    background-color: #FCC470;
+}
+
+#albert.level .speech-btn{
+    background-color: #E2AA56;
+}
+
 #albert .speech-text {
     height: 200px;
     overflow: scroll;
