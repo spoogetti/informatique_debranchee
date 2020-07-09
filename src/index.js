@@ -3,6 +3,8 @@ import Phaser from "phaser";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/main.css';
+import './assets/styles/header.css';
+import '@fortawesome/fontawesome-free/js/all'
 
 import ReconnectGame from "../lib/ReconnectGame";
 
