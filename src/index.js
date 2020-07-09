@@ -19,7 +19,6 @@ const launchGame = (pseudo) => {
 
 let margins = 200
 // setup container
-document.querySelector("#app").style.clipPath = 'inset(105px 20% 50px 20%)'
 document.querySelector("#app").style.position = 'absolute'
 document.querySelector("#app").style.top = 0
 document.querySelector("#app").style.zIndex = 1
