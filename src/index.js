@@ -16,28 +16,33 @@ document.querySelector("#startGameBtn").addEventListener("click", () => {
 
 const launchGame = (pseudo) => {
 
-    let margins = 200
-        // setup container
-    document.querySelector("#app").style.width = window.innerWidth + "px"
-    document.querySelector("#app").style.height = window.innerHeight + margins + "px"
-    document.querySelector("#app").style.overflow = "scroll"
+let margins = 200
+// setup container
+document.querySelector("#app").style.width = window.innerWidth + "px"
+document.querySelector("#app").style.height = window.innerHeight + margins + "px"
+document.querySelector("#app").style.overflow = "scroll"
 
-    const config = {
-        scale: {
-            parent: "app",
-            width: window.innerWidth,
-            height: window.innerHeight + margins,
-            mode: Phaser.Scale.ENVELOP,
-        },
-        scene: {
-            create: create
-        }
-    };
+const config = {
+  scale: {
+    parent: "app",
+    width: window.innerWidth,
+    height: window.innerHeight + margins,
+    mode: Phaser.Scale.ENVELOP,
+  },
+  scene: {
+    preload: preload,
+    create: create
+  }
+};
 
-    var game = new ReconnectGame(config)
+var game = new ReconnectGame(config)
 
-    function create() {
-        game.createMap();
-        game.configurePlayer(pseudo)
-    }
+function preload() {
+  this.load.svg("lock", '../lib/assets/lock.svg')
+}
+
+function create() {
+  game.createMap();
+  game.configurePlayer(pseudo)
+}
 }
