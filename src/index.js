@@ -63,4 +63,5 @@ const launchGame = (pseudo) => {
     game.canvas.addEventListener("reconnect-game-levelChoosed", () => {
       header.hide()
     })
+  }
 };
