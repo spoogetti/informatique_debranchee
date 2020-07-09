@@ -8,6 +8,7 @@ import '@fortawesome/fontawesome-free/js/all'
 import header from "./header"
 import './assets/styles/home.css';
 import './assets/styles/about.css';
+import './assets/styles/card-game.css';
 import './assets/styles/albert.css';
 
 import ReconnectGame from "../lib/ReconnectGame";
@@ -23,9 +24,13 @@ const launchGame = (pseudo) => {
 
   let margins = 200
   // setup container
+  document.querySelector("#app").style.position = 'absolute'
+  document.querySelector("#app").style.top = 0
+  document.querySelector("#app").style.zIndex = 1
   document.querySelector("#app").style.width = window.innerWidth + "px"
   document.querySelector("#app").style.height = window.innerHeight + margins + "px"
   document.querySelector("#app").style.overflow = "scroll"
+
 
   const config = {
     scale: {
