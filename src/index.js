@@ -8,9 +8,10 @@ import '@fortawesome/fontawesome-free/js/all'
 import header from "./header"
 import './assets/styles/home.css';
 import './assets/styles/about.css';
+import './assets/styles/albert.css';
 
 import ReconnectGame from "../lib/ReconnectGame";
-import styles from "../lib/globals/styles";
+import albert from "./albert";
 
 document.querySelector("#startGameBtn").addEventListener("click", () => {
     let pseudo = document.querySelector("#pseudo").value;
@@ -50,6 +51,12 @@ const launchGame = (pseudo) => {
     game.configurePlayer(pseudo)
     header.show()
     header.update(game.availablePipes, game.player.level)
+
+    albert.start(() => {
+      albert.talk("Salut, moi c'est Albert ! Je suis là pour t'aider à reconnecter les câbles entre eux afin qu'internet se remette à fonctionner. Pour collecter des câbles, commence par cliquer sur le premier niveau", () => {
+        albert.closeButton("C'est parti")
+      })
+    });
 
     // Bind events of game
     game.canvas.addEventListener("reconnect-game-placedPipe", () => {
