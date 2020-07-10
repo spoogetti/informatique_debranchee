@@ -135,4 +135,13 @@ const launchGame = (pseudo) => {
       header.update(game.availablePipes, game.player.level)
     })
   }
+
+  document.querySelector(".game-backmap").addEventListener("click", () => {
+    if(game.currentGame) {
+      window.scroll(0, window.innerHeight)
+      game.currentGame.scene.stop(game.currentGame.key)
+      game.backToMap()
+      albert.defaultMode()
+    }
+  })
 };
