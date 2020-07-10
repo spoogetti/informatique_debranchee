@@ -10,6 +10,7 @@ import './assets/styles/home.css';
 import './assets/styles/about.css';
 import './assets/styles/card-game.css';
 import './assets/styles/albert.css';
+import './assets/styles/particle.css';
 
 import ReconnectGame from "../lib/ReconnectGame";
 import albert from "./albert";
