@@ -12,6 +12,7 @@ import './assets/styles/card-game.css';
 import './assets/styles/albert.css';
 import './assets/styles/particle.css';
 
+import lockIcon from "../lib/assets/lock.svg";
 import ReconnectGame from "../lib/ReconnectGame";
 import albert from "./albert";
 import dialogs from "./dialogs";
@@ -49,7 +50,7 @@ const launchGame = (pseudo) => {
   var game = new ReconnectGame(config)
 
   function preload() {
-    this.load.svg("lock", '../lib/assets/lock.svg')
+    this.load.image('lock', lockIcon);
   }
   
   function create() {
