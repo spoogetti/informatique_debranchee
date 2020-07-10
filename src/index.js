@@ -81,7 +81,48 @@ const launchGame = (pseudo) => {
 
       albert.levelMode()
       albert.wake()
-      albert.talk("Coucou les petits")
+
+      let text;
+      switch(e.detail.level.name) {
+        case "cardGame":
+          text = "Positionne les cartes de la plus petite à la plus grande. La plus petite doit être placée en haut et la plus grande en bas. Touche deux cartes et je t'indiquerais la plus petite des deux."
+          break;
+        case "crepeGame":
+          text = "Empile les bâtonnets du plus petit au plus grand. Aide toi pour cela de la flèche  pour retourner le paquet qui se trouve au-dessus."
+          break;
+        default:
+          text= "Je ne connais pas ce niveau"
+      }
+      albert.talk(text)
+    })
+
+    game.canvas.addEventListener("reconnect-level-guess", (e) => {
+      let lvl = e.detail.level
+      let won = e.detail.won
+
+      if(won) {
+        albert.wake()
+        albert.talk("Bravo, tu as gagné !", () => {
+          albert.onsubmit(() => {
+            window.scroll(0, window.innerHeight)
+            lvl.scene.stop(lvl.key)
+            game.availablePipes += lvl.reward
+            game.backToMap()
+            albert.defaultMode()
+            albert.sleep()
+            //reset albert default
+            albert.onsubmit(() => {
+              albert.sleep()
+            })
+          })
+          albert.HTMLBtn().innerHTML = "Retourner à la carte"
+        })
+      } else {
+        albert.wake()
+        albert.talk("Essaie encore !", () => {
+          albert.HTMLBtn().innerHTML = "Réessayer"
+        })
+      }
     })
 
     game.canvas.addEventListener("reconnect-game-backToMap", () => {
