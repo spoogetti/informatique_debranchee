@@ -32,6 +32,7 @@ const albert = {
     talk(content, callback=()=>{}) {
         var i = 0;
 
+        this.clear()
         this.HTMLBtn().classList.add("d-none")
         typeWriter();
 
