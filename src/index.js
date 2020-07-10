@@ -103,6 +103,7 @@ const launchGame = (pseudo) => {
       let won = e.detail.won
 
       if(won) {
+        game.player.level = lvl.levelGain
         albert.wake()
         albert.talk("Bravo, tu as gagné !", () => {
           albert.onsubmit(() => {
