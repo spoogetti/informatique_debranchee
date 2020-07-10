@@ -83,6 +83,35 @@ const launchGame = (pseudo) => {
       albert.talk("Coucou les petits")
     })
 
+    game.canvas.addEventListener("reconnect-level-guess", (e) => {
+      let lvl = e.detail.level
+      let won = e.detail.won
+
+      if(won) {
+        albert.wake()
+        albert.talk("Bravo, tu as gagné !", () => {
+          albert.onsubmit(() => {
+            window.scroll(0, window.innerHeight)
+            lvl.scene.stop(lvl.key)
+            game.availablePipes += lvl.reward
+            game.backToMap()
+            albert.defaultMode()
+            albert.sleep()
+            //reset albert default
+            albert.onsubmit(() => {
+              albert.sleep()
+            })
+          })
+          albert.HTMLBtn().innerHTML = "Retourner à la carte"
+        })
+      } else {
+        albert.wake()
+        albert.talk("Essaie encore !", () => {
+          albert.HTMLBtn().innerHTML = "Réessayer"
+        })
+      }
+    })
+
     game.canvas.addEventListener("reconnect-game-backToMap", () => {
       document.querySelector("#cardGame").classList.add("d-none")
       document.querySelector("#app").classList.remove("clip-cardGame")

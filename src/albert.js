@@ -58,6 +58,17 @@ const albert = {
         })
     },
 
+    onsubmit(callback=()=>{}) {
+        let _tempbtn = this.HTMLBtn().cloneNode()
+        // remove to remove all event listenners binded
+        this.HTMLBtn().remove()
+        this.HTMLContainer().append(_tempbtn)
+        this.HTMLBtn().innerHTML = "Ok"
+        this.HTMLBtn().addEventListener("click", () => {
+            callback()
+        })
+    },
+
     levelMode() {
         this.HTMLContainer().classList.add("level")
     },
