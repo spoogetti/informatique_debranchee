@@ -80,7 +80,19 @@ const launchGame = (pseudo) => {
 
       albert.levelMode()
       albert.wake()
-      albert.talk("Coucou les petits")
+
+      let text;
+      switch(e.detail.level.name) {
+        case "cardGame":
+          text = "Positionne les cartes de la plus petite à la plus grande. La plus petite doit être placée en haut et la plus grande en bas. Touche deux cartes et je t'indiquerais la plus petite des deux."
+          break;
+        case "crepeGame":
+          text = "crepe"
+          break;
+        default:
+          text= "Je ne connais pas ce niveau"
+      }
+      albert.talk(text)
     })
 
     game.canvas.addEventListener("reconnect-level-guess", (e) => {
