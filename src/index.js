@@ -87,7 +87,7 @@ const launchGame = (pseudo) => {
           text = "Positionne les cartes de la plus petite à la plus grande. La plus petite doit être placée en haut et la plus grande en bas. Touche deux cartes et je t'indiquerais la plus petite des deux."
           break;
         case "crepeGame":
-          text = "crepe"
+          text = "Empile les bâtonnets du plus petit au plus grand. Aide toi pour cela de la flèche  pour retourner le paquet qui se trouve au-dessus."
           break;
         default:
           text= "Je ne connais pas ce niveau"
