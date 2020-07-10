@@ -96,6 +96,7 @@ const launchGame = (pseudo) => {
         default:
           text= "Je ne connais pas ce niveau"
       }
+      albert.HTMLBtn().innerHTML = "C'est parti !"
       albert.talk(text)
     })
 
