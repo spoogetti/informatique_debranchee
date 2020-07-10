@@ -30,7 +30,6 @@ const launchGame = (pseudo) => {
   document.querySelector("#app").style.zIndex = 1
   document.querySelector("#app").style.width = window.innerWidth + "px"
   document.querySelector("#app").style.height = window.innerHeight + margins + "px"
-  document.querySelector("#app").style.overflow = "scroll"
 
 
   const config = {
@@ -77,6 +76,7 @@ const launchGame = (pseudo) => {
       header.hide()
       document.querySelector("#cardGame").classList.remove("d-none")
       document.querySelector("#app").classList.add("clip-cardGame")
+      document.querySelector("body").classList.add("overflow-hidden")
       document.querySelector("#reward").innerHTML = e.detail.level.reward
       document.querySelector("#level").innerHTML = game.player.level
       document.querySelector(".game-name").innerHTML = e.detail.level.displayName
@@ -131,6 +131,7 @@ const launchGame = (pseudo) => {
     game.canvas.addEventListener("reconnect-game-backToMap", () => {
       document.querySelector("#cardGame").classList.add("d-none")
       document.querySelector("#app").classList.remove("clip-cardGame")
+      document.querySelector("body").classList.remove("overflow-hidden")
       header.show()
       header.update(game.availablePipes, game.player.level)
     })

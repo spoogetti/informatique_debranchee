@@ -48,6 +48,11 @@
     text-transform: uppercase;
 }
 
+.divider {
+    font-family: 'Fredoka One', cursive;
+    margin: 0 5px;
+}
+
 .game-container {
     position: relative;
     height: 100%;
@@ -98,5 +103,5 @@
 }
 
 .clip-cardGame {
-    clip-path: inset(105px 20% 50px); 
+    clip-path: inset(105px 20% 250px); 
 }
