@@ -127,7 +127,7 @@ const launchGame = (pseudo) => {
         })
       } else {
         albert.wake()
-        let rand = Math.floor(Math.random() * dialogs.wrongGuess.length - 1)  
+        let rand = Math.floor(Math.random() * dialogs.wrongGuess.length)  
         albert.talk(dialogs.wrongGuess[rand], () => {
           albert.HTMLBtn().innerHTML = "Réessayer"
         })
