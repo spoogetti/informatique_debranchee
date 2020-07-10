@@ -45,8 +45,8 @@ module.exports = {
       template: "./index.html",
     }),
     new HtmlWebpackPlugin({
-      filename: 'pages/apropos.html',
-      template: 'pages/apropos.html'
+      filename: './apropos.html',
+      template: './apropos.html'
     })
   ]
 };

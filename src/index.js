@@ -17,6 +17,8 @@ import ReconnectGame from "../lib/ReconnectGame";
 import albert from "./albert";
 import dialogs from "./dialogs";
 
+document.getElementsByTagName("body")[0].style = ''
+
 document.querySelector("#startGameBtn").addEventListener("click", () => {
     let pseudo = document.querySelector("#pseudo").value;
     document.querySelector("#loginView").remove();
