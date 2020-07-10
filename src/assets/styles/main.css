@@ -4,7 +4,6 @@
 
 body {
     height: 100vh;
-    /* overflow: hidden; */
 }
 
 
@@ -18,6 +17,11 @@ body {
     margin: auto;
 }
 
+@media (min-width: 1024px) {
+    .custom-container {
+        max-width: 80%;
+    }
+}
 
 /* Speech */
 
