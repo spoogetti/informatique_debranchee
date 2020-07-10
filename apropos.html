@@ -13,7 +13,7 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 
-<body>
+<body style="display: none">
     <div class="page-about">
         <div id="particle-container">
             <div class="particle"></div>
@@ -76,6 +76,8 @@
             setTimeout(typeWriter, speed);
         }
     }
+
+    document.getElementsByTagName("body")[0].style = ''
 </script>
 
 </html>
