@@ -13,6 +13,7 @@ import './assets/styles/albert.css';
 
 import ReconnectGame from "../lib/ReconnectGame";
 import albert from "./albert";
+import dialogs from "./dialogs";
 
 document.querySelector("#startGameBtn").addEventListener("click", () => {
     let pseudo = document.querySelector("#pseudo").value;
@@ -120,7 +121,8 @@ const launchGame = (pseudo) => {
         })
       } else {
         albert.wake()
-        albert.talk("Essaie encore !", () => {
+        let rand = Math.floor(Math.random() * dialogs.wrongGuess.length - 1)  
+        albert.talk(dialogs.wrongGuess[rand], () => {
           albert.HTMLBtn().innerHTML = "Réessayer"
         })
       }
