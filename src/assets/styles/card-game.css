@@ -12,6 +12,24 @@
     align-items: center;
 }
 
+.game-backmap {
+    position: fixed;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #580FA7;
+    border-radius: 60px;
+    z-index: 2;
+}
+
+.game-backmap svg {
+    display: block;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: translate(-50%, -50%);
+}
+
 .game-header {
     width: fit-content;
     min-width: 180px;
