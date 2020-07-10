@@ -78,6 +78,7 @@ const launchGame = (pseudo) => {
       document.querySelector("#app").classList.add("clip-cardGame")
       document.querySelector("#reward").innerHTML = e.detail.level.reward
       document.querySelector("#level").innerHTML = game.player.level
+      document.querySelector(".game-name") = e.detail.level.displayName
 
       albert.levelMode()
       albert.wake()
